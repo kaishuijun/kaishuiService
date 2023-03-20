@@ -1,0 +1,18 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: '123'
+#   # url: jdbc:mysql://127.0.0.1:3306/springboottest?characterEncoding=utf-8&serverTimezone=UTC&allowMultiQueries=true
+#    url: jdbc:mysql://localhost:3306/springboottest?
+
+spring:
+  datasource:
+    username: root
+    password: '123'
+    url: jdbc:mysql://localhost:3306/itheima?
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
