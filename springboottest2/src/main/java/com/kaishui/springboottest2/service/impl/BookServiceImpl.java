@@ -11,31 +11,28 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements IBookService {
-    @Autowired
-    BookMapper bookMapper;
     @Override
     public Boolean delete(Integer id) {
-        return bookMapper.deleteById(id) > 0;
+        return null;
     }
 
     @Override
     public Boolean modify(Book book) {
-        return bookMapper.updateById(book) > 0;
+        return null;
     }
 
     @Override
     public Boolean insert(Book book) {
-        return bookMapper.insert(book) > 0;
+        return null;
     }
 
     @Override
     public Book get(Integer id) {
-        return bookMapper.selectById(id);
+        return null;
     }
+
     @Override
     public IPage<Book> getPage(int currentPage, int pageSize) {
-        IPage page = new Page(currentPage,pageSize);
-        bookMapper.selectPage(page,null);
-        return page;
+        return null;
     }
 }

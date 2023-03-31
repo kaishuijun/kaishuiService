@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.kaishui.kaishuiservice.bean.UserBean;
 
-public interface IUserService extends IService<UserBean> {
+public interface IUserService  {
     Boolean delete(Integer id);
     Boolean modify(UserBean userBean);
     Boolean insert(UserBean userBean);

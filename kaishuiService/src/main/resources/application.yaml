@@ -5,3 +5,10 @@ spring:
     url: jdbc:mysql://localhost:3306/itheima?
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8080
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
