@@ -15,25 +15,30 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserMapper userMapper;
-//    @Autowired
-//    IUserService iUserService;
+    @Autowired
+    IUserService iUserService;
     private Gson gson = new Gson();
 
     @GetMapping
-    public List selectAll(){
-        return userMapper.selectlist(1);
+    public String getById(int id){
+        iUserService.getByid(id);
+        return iUserService.getByid(id).toString();
     }
+//    @GetMapping
+//    public List selectAll(){
+//        return userMapper.selectlist(1);
+//    }
     @PostMapping
-    public String insterData(){
+    public void insterData(){
         UserBean userBean = new UserBean();
-        userBean.setZhiyuanname("开水");
-        userBean.setAge(20);
-        userBean.setDept_id(1);
+        userBean.setId(10);
+        userBean.setZhiyuanname("小张");
+        userBean.setAge(30);
+        userBean.setDept_id(2);
         userBean.setSalary(8000);
-        userBean.setJob("总裁");
+        userBean.setJob("部长");
         userBean.setGender("男");
-        userMapper.insert(userBean);
-        return "successful";
+        iUserService.insert(userBean);
     }
     @PutMapping
     public String upData(){
@@ -55,5 +60,6 @@ public class UserController {
         userMapper.deleteById(userBean);
         return "DeleteSuccessful";
     }
+
 
 }

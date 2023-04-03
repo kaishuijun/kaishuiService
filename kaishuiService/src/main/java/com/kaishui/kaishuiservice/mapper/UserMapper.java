@@ -10,9 +10,10 @@ import org.springframework.stereotype.Repository;
 import java.awt.print.Book;
 import java.util.List;
 
-//@Repository
+@Repository
 @Mapper
 public interface UserMapper extends BaseMapper<UserBean> {
     @Select("select * from emp limit 0,10")//查全部
     List<UserBean> selectlist(@Param("id") int id);
+
 }
